@@ -1,4 +1,5 @@
 import './ExpanseDate.css';
+import Card from "./UI/Card";
 
 function ExpanseDate(props) {
     const month = props.date.toLocaleString('en-US', {month: 'long'});
@@ -6,11 +7,11 @@ function ExpanseDate(props) {
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});
 
     return(
-        <div className={'expense-date'}>
+        <Card className={'expense-date'}>
             <div className={'expense-date__month'}>{month}</div>
             <div className={'expense-date__year'}>{year}</div>
             <div className={'expense-date__day'}>{day}</div>
-        </div>
+        </Card>
     )
 }
 export default ExpanseDate;
